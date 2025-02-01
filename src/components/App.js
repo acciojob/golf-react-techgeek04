@@ -9,7 +9,6 @@ class App extends Component {
       posi: 0,
       ballPosition: { left: "0px" },
     };
-    this.renderBallOrButton = this.renderBallOrButton.bind(this);
     this.buttonClickHandler = this.buttonClickHandler.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
@@ -39,7 +38,7 @@ class App extends Component {
     if (this.state.renderBall) {
       return <div className="ball" style={this.state.ballPosition}></div>;
     } else {
-      return <button onClick={this.buttonClickHandler}>Start</button>;
+      return <button className="start" onClick={this.buttonClickHandler}>Start</button>;
     }
   }
 
